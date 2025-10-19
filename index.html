@@ -5,27 +5,55 @@
   <title>第五組導讀報告</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 引入 Reveal.js 樣式 -->
+  <!-- 引入 Reveal.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css">
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
+
+      <!-- 封面 -->
       <section>
         <h1>第五組</h1>
-	<h1>通訊服務的創新應用<h1>
+        <h2>通訊服務的創新應用</h2>
+        <p>導讀報告</p>
       </section>
 
+      <!-- 主題 1 -->
       <section>
-        <h2>第二頁內容</h2>
-        <p>這裡可以放圖片、影片、文字、動畫。</p>
+        <h2>5G 技術應用</h2>
+        <ul>
+          <li>低延遲、高速率</li>
+          <li>遠端醫療、AR/VR</li>
+          <li>智慧城市與物聯網</li>
+        </ul>
       </section>
 
+      <!-- 主題 2 -->
+      <section>
+        <h2>即時通訊 App 創新</h2>
+        <ul>
+          <li>訊息加密與安全傳輸</li>
+          <li>AI 聊天機器人</li>
+          <li>多人群組即時協作</li>
+        </ul>
+      </section>
+
+      <!-- 互動 Demo -->
+      <section>
+        <h2>互動模擬：訊息傳送</h2>
+        <p>點擊按鈕模擬訊息即時傳送</p>
+        <button onclick="sendMessage()">傳送訊息</button>
+        <div id="msg" style="margin-top:20px; font-weight:bold;"></div>
+      </section>
+
+      <!-- 結尾 -->
       <section>
         <h2>感謝觀看 🙌</h2>
-        <p>這個簡報是用 HTML + Reveal.js 做的。</p>
+        <p>這個簡報是用 HTML + Reveal.js 做的，並加入互動功能。</p>
       </section>
+
     </div>
   </div>
 
@@ -35,6 +63,12 @@
       hash: true,
       slideNumber: true
     });
+
+    // 互動訊息傳送功能
+    function sendMessage() {
+      const msgDiv = document.getElementById("msg");
+      msgDiv.innerText = "訊息已送達 ✅ (" + new Date().toLocaleTimeString() + ")";
+    }
   </script>
 </body>
 </html>
